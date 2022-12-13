@@ -1,0 +1,19 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixin'
+
+i    
+    font-size: 1.25rem
+
+    &.fa-circle-plus
+        color: variables.$add-color
+        font-size: 2.4rem
+
+        @include base-mixin.mobile
+            font-size:  2rem
+
+    &.fa-trash
+        color: variables.$delete-color
+
+li > i
+    font-size: 1.3rem
+    color: variables.$delete-color

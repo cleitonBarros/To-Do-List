@@ -1,0 +1,51 @@
+@use '../1-base/base-mixin'
+@use '../1-base/variables'
+
+body
+    display: flex
+    justify-content: center
+    background: variables.$bg-color 
+   
+
+    main
+        padding: 3rem 2rem
+        width: 60%
+        min-width: 500px
+
+        header
+            display: flex
+            gap: 4rem
+            justify-content: center
+            align-items: center
+            border-bottom: 1.5px solid variables.$dark-light-color
+
+            margin-bottom: 2rem
+
+            p
+                display: flex
+                justify-content: center
+                font-size: xx-large
+                font-weight: 500
+
+                @include base-mixin.mobile
+                    font-size: x-large
+            
+        .boxInsert
+            display: flex
+            background: lightgray
+            box-shadow: 6px 5px 10px 0px grey
+            border-radius: 10px
+            padding: 0.625rem
+
+            .textInput
+                padding:0.625rem
+                border-radius: 10px
+                width: 90%
+
+                @include base-mixin.mobile
+                    width: 100%
+
+            
+   
+        
+

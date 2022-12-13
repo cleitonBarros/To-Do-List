@@ -1,0 +1,13 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixin'
+
+button
+    width: 10%
+    background: transparent
+    border: none
+    cursor: pointer
+    outline: none
+
+.boxInsert button 
+    @include base-mixin.mobile
+        width: 30%    
