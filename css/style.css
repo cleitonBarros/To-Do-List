@@ -67,6 +67,33 @@ body main .boxInsert .textInput {
   }
 }
 
+ul {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+ul div.divLi {
+  margin-top: 20px;
+  padding: 10px;
+  background: lightgray;
+  border-radius: 10pxls;
+  box-shadow: 6px 5px 10px 0px grey;
+  display: flex;
+  align-items: center;
+}
+ul div.divLi span {
+  width: 80%;
+  color: dimgray;
+}
+ul div.divLi input {
+  width: 10%;
+  outline: none;
+  accent-color: currentcolor;
+}
+ul .line-through {
+  text-decoration: line-through;
+}
+
 button {
   width: 10%;
   background: transparent;

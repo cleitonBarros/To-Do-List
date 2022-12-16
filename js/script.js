@@ -16,16 +16,13 @@ texto.addEventListener('keypress', event =>{
 })
 
 btnInsert.onclick = () =>{
-    if(texto.value !=""){
-        setItemLocalStorage()
-    }
+  texto.value != "" ? setItemLocalStorage() : alert('prencha o campo')
+
 }
 
 function setItemLocalStorage(){
-    if( itensDB.length >= 20 ){
-        alert("maximo de 20 itens atigindo")
-        return
-    }
+    itensDB.length >= 20 ? alert("maximo de 20 itens atigindo") : ''
+        
 
     itensDB.push({
         'item': texto.value,
@@ -53,11 +50,11 @@ function inserItemOnScreen(text, status, index){
     <div class="divLi">
       <input type="checkbox" ${status} data-i=${index} onchange="done(this, ${index});" />
       <span data-si=${index}>${text}</span>
-      <button onclick="removeItem(${index})" data-i=${index}><i class='bx bx-trash'></i></button>
+      <button onclick="removeItem(${index})" data-i=${index}><i class='fa-solid fa-trash'></i></button>
     
     `
-  ul.appendChild(li)
-  ul.appendChild(li)
+  ul.prepend(li)
+  
 
   if (status) {
     document.querySelector(`[data-si="${index}"]`).classList.add('line-through')
@@ -68,14 +65,8 @@ function inserItemOnScreen(text, status, index){
   texto.value = ''
 }
 
-function done (chk, index){
-    
-  if (chk.checked) {
-    itensDB[index].status = 'checked' 
-  } else {
-    itensDB[index].status = '' 
-  }
-
+function done (chk, index){   
+  chk.checked ? itensDB[index].status = 'checked' : itensDB[index].status = '' 
 }
 
 function removeItem(i) {
