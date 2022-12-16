@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: whitesmoke;
+}
+body main {
+  padding: 3rem 2rem;
+  width: 60%;
+  min-width: 500px;
+}
+body main header {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1.5px solid #969494;
+  margin-bottom: 2rem;
+}
+body main header p {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: 500;
+}
+@media (max-width: 775px) {
+  body main header p {
+    font-size: x-large;
+  }
+}
+body main .boxInsert {
+  display: flex;
+  background: lightgray;
+  box-shadow: 6px 5px 10px 0px grey;
+  border-radius: 10px;
+  padding: 0.625rem;
+}
+body main .boxInsert .textInput {
+  padding: 0.625rem;
+  border-radius: 10px;
+  width: 90%;
+}
+@media (max-width: 775px) {
+  body main .boxInsert .textInput {
+    width: 100%;
+  }
+}
+
+button {
+  width: 10%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 775px) {
+  .boxInsert button {
+    width: 30%;
+  }
+}
+
+i {
+  font-size: 1.25rem;
+}
+i.fa-circle-plus {
+  color: purple;
+  font-size: 2.4rem;
+}
+@media (max-width: 775px) {
+  i.fa-circle-plus {
+    font-size: 2rem;
+  }
+}
+i.fa-trash {
+  color: #e20a2e;
+}
+
+li > i {
+  font-size: 1.3rem;
+  color: #e20a2e;
+}
+
+/*# sourceMappingURL=index.css.map */
