@@ -73,7 +73,7 @@ function inserItemOnScreen(text, status, created, finished, index ){
     <div class="divLi">
       <input type="checkbox" ${status} data-i=${index} onchange="done(this, ${index});" />
       <span data-si=${index}>${text}</span>
-      <button disabled onclick="removeItem(${index , created, finished})" data-i=${index}><i class='fa-solid fa-trash'></i></button>
+      <button disabled="true" onclick="removeItem(${index , created, finished})" data-i=${index}><i class='fa-solid fa-trash'></i></button>
     
     `
     spanOpen.innerHTML=`${created}`
@@ -91,16 +91,14 @@ function inserItemOnScreen(text, status, created, finished, index ){
 
 function done (chk, i){   
 
-  const button = document.querySelector('.divLi button')
+  const button = document.querySelector('li .divLi button')
 
   if (chk.checked) {
     itensDB[i].status = 'checked' 
     button.disabled = false
-    button.opacity = 1
   } else {
-    itensDB[i].status = '' 
-    button.disabled = true
-    button.opacity = 0.5
+    itensDB[i].status = ''
+    button.disabled = true;
   }
  // chk.checked ? itensDB[index].status = 'checked' : itensDB[index].status = '' 
   updateDB()

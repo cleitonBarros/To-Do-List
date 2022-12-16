@@ -20,6 +20,10 @@ ul {
   list-style: none;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -105,9 +109,6 @@ button {
   border: none;
   cursor: pointer;
   outline: none;
-}
-button span.line-through {
-  text-decoration: line-through;
 }
 
 @media (max-width: 775px) {
