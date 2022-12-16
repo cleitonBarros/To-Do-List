@@ -21,7 +21,9 @@ btnInsert.onclick = () =>{
 }
 
 function setItemLocalStorage(){
+    itensDB= localStorage.getItem('ListToDo') ? JSON.parse(localStorage.getItem('ListToDo')) : []
     itensDB.length >= 20 ? alert("maximo de 20 itens atigindo") : ''
+
         
 
     itensDB.push({
