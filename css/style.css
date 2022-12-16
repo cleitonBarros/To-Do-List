@@ -66,6 +66,14 @@ body main .boxInsert .textInput {
     width: 100%;
   }
 }
+body main .boxText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .boxText p {
+  font-weight: 700;
+}
 
 ul {
   display: flex;
@@ -90,9 +98,6 @@ ul div.divLi input {
   outline: none;
   accent-color: currentcolor;
 }
-ul .line-through {
-  text-decoration: line-through;
-}
 
 button {
   width: 10%;
@@ -100,6 +105,9 @@ button {
   border: none;
   cursor: pointer;
   outline: none;
+}
+button span.line-through {
+  text-decoration: line-through;
 }
 
 @media (max-width: 775px) {
